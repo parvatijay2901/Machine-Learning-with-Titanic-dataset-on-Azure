@@ -71,7 +71,7 @@ Finally, save the model for future use.
 ### Model deployment:
 Deployment is about delivering a trained model into production so that it can be consumed by others. In Azure, deploying the best model will allow it to interact with the HTTP API service and interact with the model by sending data over POST requests. In this project, I have deployed the model into a production environment using Azure Container Instance (ACI). ACI offers the fastest and simplest way to run a container without having to manage any virtual machines and without having to adopt a higher-level service. Also, authentication is enabled to prevent unauthorized access.
 
-I have deployed the saved AutoML python model and for that first we have to create a container instance and set the number of cpu_cores and memory_gb based on our requirements. We should then create an InferenceConfig instance to link our environment and entry script. Entry script [score.py]() is directly taken from Azure ML studio after saving the model. Once they are specified, deploy the model. 
+It is always preferred to deploy models giving better accuracy in real world, but I am just experimenting on this platform. Hence, I have deployed the saved AutoML python model and for that first we have to create a container instance and set the number of cpu_cores and memory_gb based on our requirements. We should then create an InferenceConfig instance to link our environment and entry script. Entry script [score.py]() is directly taken from Azure ML studio after saving the model. Once they are specified, deploy the model. 
 
 ![Deploy_success](Images/Deploy_success.png)
 ![Studio_deploy1](Images/Studio_deploy1.png)
