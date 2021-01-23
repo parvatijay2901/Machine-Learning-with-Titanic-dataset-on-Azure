@@ -50,7 +50,7 @@ Use 'joblib.dump()' to save the model file. Whenwe have to deploy the same model
 ![Best_run_hd](Images/Best_run_hd.png)
 ![Save_model_hd](Images/Save_model_hd.png)
 
-**2. AutoML:** Automated machine learning (or) AutoML is the process of automating the machine learning problems in real-world . During training, AML creates a number of pipelines in parallel that try different algorithms and parameters for you. The service iterates through ML algorithms paired with feature selections, where each iteration produces a model with a training score. Since AutoML only accepts AML TabularDatasets when working on a remote compute, convert pandas dataframe to TabularDataset and then fill in all the parameters of AutoMLConfig(). AutoML configuration object contains and persists the parameters for configuring the experiment run, as well as the training data to be used at run time. experiment_timeout_mins (30) , task (classification), Primary metric (accuracy), n_cross_validations (5), compute_target, training_data, label_column_name (Survived) are the parameters specified. Execute [AutoML.ipynb](Files/AutoML.ipynb)
+**2. AutoML:** Automated machine learning (or) AutoML is the process of automating the machine learning problems in real-world . During training, AML creates a number of pipelines in parallel that try different algorithms and parameters for you. The service iterates through ML algorithms paired with feature selections, where each iteration produces a model with a training score. Since AutoML only accepts AML TabularDatasets when working on a remote compute, convert pandas dataframe to TabularDataset and then fill in all the parameters of AutoMLConfig(). AutoML configuration object contains and persists the parameters for configuring the experiment run, as well as the training data to be used at run time. experiment_timeout_mins (30) , task (classification), Primary metric (accuracy), n_cross_validations (5), compute_target, training_data, label_column_name (Survived) are the parameters specified. Execute [AutoML.ipynb](Files/AutoML.ipynb) to perform this.
 
 #### Analysis:
 The results obtained after run are as follows:
@@ -63,7 +63,7 @@ Use 'joblib.dump()' to save the model file. Whenwe have to deploy the same model
 ![Best_run_automl](Images/Best_run_automl.png)
 
 The best algorithms chosen by the run are MaxAbsScalar and LightBGM. They gave an accuracy of 81.1%
-![Best_model_automl](Images/Best_model_automl)
+![Best_model_automl](Images/Best_model_automl.png)
 
 Finally, save the model for future use. 
 ![Save_model_automl](Images/Save_model_automl.png)
@@ -77,7 +77,7 @@ I have deployed the saved AutoML python model and for that first we have to crea
 ![Studio_deploy1](Images/Studio_deploy1.png)
 ![Deploy_logs](Images/Deploy_logs.png)
 
-In AML, we can also consume a deployed service via an HTTP API. An HTTP API is a URL that is exposed over the network so that interaction with a trained model can happen via HTTP requests. For this, first we will first give 2 sets of data to score (Either give the data by yourself or use Swagger documentations to get the format). The APIs exposed by Azure ML will use JSON to accept data and submit responses and serve as a bridge language among different environments. Execute [endpoint.py](Files/endpoint.py)
+In AML, we can also consume a deployed service via an HTTP API. An HTTP API is a URL that is exposed over the network so that interaction with a trained model can happen via HTTP requests. For this, first we will first give 2 sets of data to score (Either give the data by yourself or use Swagger documentations to get the format). The APIs exposed by Azure ML will use JSON to accept data and submit responses and serve as a bridge language among different environments. Execute [endpoint.py](Files/endpoint.py) to perform this.
 
 ![Endpoint_code](Images/Endpoint_code.png)
 ![Endpoint_result](Images/Endpoint_result.png)
