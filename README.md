@@ -13,6 +13,10 @@ Since Kaggle doesn’t provide us with the predictions of test dataset, I have o
 
 ![Dataset](Images/Dataset.png)
 
+Dataset is first downloaded from Kaggle. Then I stored it in my GitHub repository and accessed it directly like this:
+
+![Data](Images/Data.png)
+
 ## Project description
 ### Data analysis and pre-processing:
 Exploratory Data Analysis (EDA) is one of the crucial step in data science that allows us to achieve certain insights and statistical measures that are essential for prediction. Execute [EDA.ipynb](Files/EDA.ipynb) to perform this. 
@@ -43,6 +47,12 @@ The results obtained after run are as follows:
 
 ![Logs_hd](Images/Logs_hd.png)
 ![Metric hd](Images/Metric_hd.png)
+![Hyperparameters_HyperDrive](Images/Hyperparameters_HyperDrive.png)
+
+**Parameters generated:**
+- Regularization Strength: 0.38360211723757753, Refers to the Regularization parameter chosen by the model. 
+- Max iterations: 300, Refers to the number of iterations done in best run. 
+- accuracy: 0.888268156424581, Refers to best run accuracy. 
 
 #### Retrieve and save the best model:
 Use 'joblib.dump()' to save the model file. Whenwe have to deploy the same model, we have to register the same saved model first and then deploy it to receive an endpoint using .register_model().
