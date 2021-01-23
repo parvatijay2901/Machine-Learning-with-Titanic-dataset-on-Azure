@@ -36,7 +36,7 @@ I have used Azure ML SDK to programmatically control the pipeline with Python. T
 
 - **Primary metric:** The primary metric refers to the output of the process under consideration. The state of the output needs to be consistently measured, errors must be spotted and correction must be immediately made. It is therefore of vital importance to identify the correct primary metrics. Though we have explicitely specified 'accuracy' as primary metric, by default 'accuracy' itself is used for classification tasks.
 
-Execute [Hyperparameter_tuning.ipynb](Files/Hyperparameter_tuning.ipynb) to perform this. HyperDrive run will begin as soon as we specify the parameters and submit the run.
+Execute [Hyperparameter_Tuning.ipynb](Files/Hyperparameter_Tuning.ipynb) to perform this. HyperDrive run will begin as soon as we specify the parameters and submit the run.
 
 #### Analysis:
 The results obtained after run are as follows:
@@ -77,7 +77,7 @@ I have deployed the saved AutoML python model and for that first we have to crea
 ![Studio_deploy1](Images/Studio_deploy1.png)
 ![Deploy_logs](Images/Deploy_logs.png)
 
-In AML, we can also consume a deployed service via an HTTP API. An HTTP API is a URL that is exposed over the network so that interaction with a trained model can happen via HTTP requests. For this, first we will first give 2 sets of data to score (Either give the data by yourself or use Swagger documentations to get the format). The APIs exposed by Azure ML will use JSON to accept data and submit responses and serve as a bridge language among different environments. Execute [Endpoint.py](Files/Endpoint.py)
+In AML, we can also consume a deployed service via an HTTP API. An HTTP API is a URL that is exposed over the network so that interaction with a trained model can happen via HTTP requests. For this, first we will first give 2 sets of data to score (Either give the data by yourself or use Swagger documentations to get the format). The APIs exposed by Azure ML will use JSON to accept data and submit responses and serve as a bridge language among different environments. Execute [endpoint.py](Files/endpoint.py)
 
 ![Endpoint_code](Images/Endpoint_code.png)
 ![Endpoint_result](Images/Endpoint_result.png)
