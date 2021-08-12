@@ -1,6 +1,6 @@
 # Machine-Learning-with-the-Titanic-dataset-on-Azure
 ## Overview
-This project is done as a part of Udacity's 'Machine Learning Engineer with Microsoft Azure' nanodegree course. We have to train, deploy and consume the model endpoint. I have used Azure Machine Learning SDK for Python to build and run machine learning workflows. Training the dataset is done using 2 methods: 
+This project is done as a part of Udacity's 'Machine Learning Engineer with Microsoft Azure' nanodegree course. I have to train, deploy and consume the model endpoint. I have used Azure Machine Learning SDK for Python to build and run machine learning workflows. Training the dataset is done using 2 methods: 
 - Optimize the hyperparameters of a standard Scikit-learn Logistic Regression using HyperDrive. 
 - AutoML run. 
 
